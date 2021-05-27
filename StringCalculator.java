@@ -43,9 +43,11 @@ public class StringCalculator {
 				if(n<=1000) totalSum += n;
 			}
 		}
-
-
-        return 0;
+		if(negatives.length()>0) {
+			throw new Exception("Negatives not allowed : "+negatives.substring(2));
+		}
+		
+		return totalSum;
 
     }
     public static void main(String[] args) {
