@@ -24,6 +24,10 @@ public class StringCalculator {
 			}
 		}
 
+        if(numbers.endsWith("\n")) {
+			throw new Exception("Invalid Input");
+		}
+
 
         return 0;
 
