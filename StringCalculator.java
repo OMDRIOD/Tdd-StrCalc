@@ -28,6 +28,22 @@ public class StringCalculator {
 			throw new Exception("Invalid Input");
 		}
 
+        numbers = numbers.replace("\n", delimiter);
+		String[] numbersArray = numbers.split(delimiter);
+		String negatives = "";
+
+        int totalSum = 0;
+		for(String num: numbersArray) {
+			num = num.trim();
+			if(num.length()>0){
+				int n = Integer.parseInt(num);
+				if(n<0) {
+					negatives += ", "+num;
+				}
+				if(n<=1000) totalSum += n;
+			}
+		}
+
 
         return 0;
 
